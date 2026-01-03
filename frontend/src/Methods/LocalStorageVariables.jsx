@@ -1,7 +1,7 @@
 import React from 'react'
 
 const LocalStorageVariables = (props) => {
-    const response = "";
+    let response = "";
     if (props === "config"){
         const access = localStorage.getItem("access");
         response = {
@@ -11,7 +11,7 @@ const LocalStorageVariables = (props) => {
             }
         };
     } else {
-        response = localStorage.getItem(props);
+        response = localStorage.getItem(props) ?? "";
     }
     return response;
 }

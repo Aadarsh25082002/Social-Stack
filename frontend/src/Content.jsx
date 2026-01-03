@@ -4,7 +4,7 @@ import axios from "axios";
 import ChangePassword from './Pages/ChangePassword';
 import CreatePosts from './Pages/CreatePosts';
 import Dashboard from './Pages/Dashboard';
-import LocalStorageVariables from "../Methods/LocalStorageVariables";
+import LocalStorageVariables from './Methods/LocalStorageVariables';
 import Profile from './Pages/Profile';
 import ViewPosts from './Pages/ViewPosts';
 

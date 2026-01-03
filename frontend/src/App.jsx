@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react'
 import { jwtDecode } from 'jwt-decode';
 import axios from "axios";
 import Content from './Content';
-import LocalStorageVariables from "../Methods/LocalStorageVariables";
+import LocalStorageVariables from './Methods/LocalStorageVariables';
 import Login from './Pages/Login'
 import './App.css'
 
@@ -50,13 +50,12 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  const config = LocalStorageVariables("config");
   const access = LocalStorageVariables("access");
 
   useEffect(() => {
     const checkAuth = async () => {
       // Check if tokens exist
-      if (localStorage.length === 0 || !access) {
+      if (localStorage.length === 0 || !localStorage.getItem("access", null)) {
         setIsAuthenticated(false);
         setLoading(false);
         return;
